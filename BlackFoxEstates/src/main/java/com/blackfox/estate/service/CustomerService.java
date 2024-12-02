@@ -2,74 +2,67 @@ package com.blackfox.estate.service;
 
 import com.blackfox.estate.dto.CustomerDTO;
 import com.blackfox.estate.entity.Customer;
+import com.blackfox.estate.exception.ResourceNotFoundException;
 import com.blackfox.estate.repository.CustomerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.blackfox.estate.mapper.CustomerMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper;
 
-    @Autowired
-    public CustomerService(CustomerRepository customerRepository) {
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
         this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
     }
 
-    // Створення нового клієнта
-    @Transactional
+    public Page<CustomerDTO> getCustomers(String email, int page, int size, String[] sort) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(parseSort(sort)));
+        return customerRepository.findAll((root, query, criteriaBuilder) -> {
+            List<jakarta.persistence.criteria.Predicate> predicates = new ArrayList<>();
+            if (email != null) {
+                predicates.add(criteriaBuilder.equal(root.get("email"), email));
+            }
+            return criteriaBuilder.and(predicates.toArray(new jakarta.persistence.criteria.Predicate[0]));
+        }, pageable).map(customerMapper::toDTO);
+    }
+
+
     public CustomerDTO createCustomer(CustomerDTO customerDTO) {
-        Optional<Customer> existingCustomer = customerRepository.findByEmail(customerDTO.email());
-        if (existingCustomer.isPresent()) {
-            throw new IllegalArgumentException("Customer with this email already exists");
-        }
-
-        Customer customer = new Customer(customerDTO.name(), customerDTO.email(), customerDTO.phoneNumber());
-        customer = customerRepository.save(customer);
-
-        return new CustomerDTO(customer.getId(), customer.getName(), customer.getEmail(), customer.getPhoneNumber());
+        Customer customer = customerMapper.toEntity(customerDTO);
+        customerRepository.save(customer);
+        return customerMapper.toDTO(customer);
     }
 
-    // Отримання всіх клієнтів
-    public List<CustomerDTO> getAllCustomers() {
-        List<Customer> customers = customerRepository.findAll();
-        return customers.stream()
-                .map(c -> new CustomerDTO(c.getId(), c.getName(), c.getEmail(), c.getPhoneNumber()))
-                .toList();
-    }
-
-    // Отримання клієнта за ID
-    public CustomerDTO getCustomerById(Long id) {
-        Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
-
-        return new CustomerDTO(customer.getId(), customer.getName(), customer.getEmail(), customer.getPhoneNumber());
-    }
-
-    // Оновлення клієнта
-    @Transactional
     public CustomerDTO updateCustomer(Long id, CustomerDTO customerDTO) {
         Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
-
-        customer.setName(customerDTO.name());
-        customer.setEmail(customerDTO.email());
-        customer.setPhoneNumber(customerDTO.phoneNumber());
-
-        customer = customerRepository.save(customer);
-
-        return new CustomerDTO(customer.getId(), customer.getName(), customer.getEmail(), customer.getPhoneNumber());
+                .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
+        customerMapper.updateCustomerFromDTO(customerDTO, customer);
+        customerRepository.save(customer);
+        return customerMapper.toDTO(customer);
     }
 
-    // Видалення клієнта
-    @Transactional
     public void deleteCustomer(Long id) {
-        if (!customerRepository.existsById(id)) {
-            throw new RuntimeException("Customer not found");
-        }
         customerRepository.deleteById(id);
+    }
+
+    private List<Sort.Order> parseSort(String[] sort) {
+        return Arrays.stream(sort)
+                .map(s -> {
+                    String[] parts = s.split(",");
+                    return new Sort.Order(Sort.Direction.fromString(parts[1]), parts[0]);
+                })
+                .collect(Collectors.toList());
     }
 }

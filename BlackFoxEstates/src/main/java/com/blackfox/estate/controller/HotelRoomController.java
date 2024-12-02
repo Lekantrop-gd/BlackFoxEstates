@@ -2,11 +2,11 @@ package com.blackfox.estate.controller;
 
 import com.blackfox.estate.dto.HotelRoomDTO;
 import com.blackfox.estate.service.HotelRoomService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/hotelRooms")
@@ -14,40 +14,35 @@ public class HotelRoomController {
 
     private final HotelRoomService hotelRoomService;
 
-    @Autowired
     public HotelRoomController(HotelRoomService hotelRoomService) {
         this.hotelRoomService = hotelRoomService;
     }
 
-    // Створення нового номера
-    @PostMapping
-    public ResponseEntity<HotelRoomDTO> createHotelRoom(@RequestBody HotelRoomDTO hotelRoomDTO) {
-        HotelRoomDTO createdRoom = hotelRoomService.createHotelRoom(hotelRoomDTO);
-        return ResponseEntity.ok(createdRoom);
-    }
-
-    // Отримання всіх номерів
     @GetMapping
-    public ResponseEntity<List<HotelRoomDTO>> getAllHotelRooms() {
-        List<HotelRoomDTO> rooms = hotelRoomService.getAllHotelRooms();
+    public ResponseEntity<Page<HotelRoomDTO>> getHotelRooms(
+            @RequestParam(required = false) String roomType,
+            @RequestParam(required = false) Integer capacity,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id,asc") String[] sort
+    ) {
+        Page<HotelRoomDTO> rooms = hotelRoomService.getHotelRooms(roomType, capacity, page, size, sort);
         return ResponseEntity.ok(rooms);
     }
 
-    // Отримання номера за ID
-    @GetMapping("/{id}")
-    public ResponseEntity<HotelRoomDTO> getHotelRoomById(@PathVariable Long id) {
-        HotelRoomDTO room = hotelRoomService.getHotelRoomById(id);
-        return ResponseEntity.ok(room);
+    @PostMapping
+    public ResponseEntity<HotelRoomDTO> createHotelRoom(@Valid @RequestBody HotelRoomDTO hotelRoomDTO) {
+        return new ResponseEntity<>(hotelRoomService.createHotelRoom(hotelRoomDTO), HttpStatus.CREATED);
     }
 
-    // Оновлення номера
     @PutMapping("/{id}")
-    public ResponseEntity<HotelRoomDTO> updateHotelRoom(@PathVariable Long id, @RequestBody HotelRoomDTO hotelRoomDTO) {
-        HotelRoomDTO updatedRoom = hotelRoomService.updateHotelRoom(id, hotelRoomDTO);
-        return ResponseEntity.ok(updatedRoom);
+    public ResponseEntity<HotelRoomDTO> updateHotelRoom(
+            @PathVariable Long id,
+            @Valid @RequestBody HotelRoomDTO hotelRoomDTO
+    ) {
+        return ResponseEntity.ok(hotelRoomService.updateHotelRoom(id, hotelRoomDTO));
     }
 
-    // Видалення номера
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteHotelRoom(@PathVariable Long id) {
         hotelRoomService.deleteHotelRoom(id);

@@ -2,77 +2,69 @@ package com.blackfox.estate.service;
 
 import com.blackfox.estate.dto.HotelRoomDTO;
 import com.blackfox.estate.entity.HotelRoom;
+import com.blackfox.estate.exception.ResourceNotFoundException;
+import com.blackfox.estate.mapper.HotelRoomMapper;
 import com.blackfox.estate.repository.HotelRoomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class HotelRoomService {
 
     private final HotelRoomRepository hotelRoomRepository;
+    private final HotelRoomMapper hotelRoomMapper;
 
-    @Autowired
-    public HotelRoomService(HotelRoomRepository hotelRoomRepository) {
+    public HotelRoomService(HotelRoomRepository hotelRoomRepository, HotelRoomMapper hotelRoomMapper) {
         this.hotelRoomRepository = hotelRoomRepository;
+        this.hotelRoomMapper = hotelRoomMapper;
     }
 
-    // Створення нового номера
-    @Transactional
+    public Page<HotelRoomDTO> getHotelRooms(String roomType, Integer capacity, int page, int size, String[] sort) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(parseSort(sort)));
+        return hotelRoomRepository.findAll((root, query, criteriaBuilder) -> {
+            List<jakarta.persistence.criteria.Predicate> predicates = new ArrayList<>();
+            if (roomType != null) {
+                predicates.add(criteriaBuilder.equal(root.get("roomType"), roomType));
+            }
+            if (capacity != null) {
+                predicates.add(criteriaBuilder.equal(root.get("capacity"), capacity));
+            }
+            return criteriaBuilder.and(predicates.toArray(new jakarta.persistence.criteria.Predicate[0]));
+        }, pageable).map(hotelRoomMapper::toDTO);
+    }
+
     public HotelRoomDTO createHotelRoom(HotelRoomDTO hotelRoomDTO) {
-        HotelRoom hotelRoom = new HotelRoom(
-                hotelRoomDTO.roomNumber(),
-                hotelRoomDTO.roomType(),
-                hotelRoomDTO.capacity(),
-                hotelRoomDTO.price());
-        hotelRoom = hotelRoomRepository.save(hotelRoom);
-
-        return new HotelRoomDTO(hotelRoom.getId(), hotelRoom.getRoomNumber(), hotelRoom.getRoomType(),
-                hotelRoom.getCapacity(), hotelRoom.getPrice());
+        HotelRoom hotelRoom = hotelRoomMapper.toEntity(hotelRoomDTO);
+        hotelRoomRepository.save(hotelRoom);
+        return hotelRoomMapper.toDTO(hotelRoom);
     }
 
-    // Отримання всіх номерів
-    public List<HotelRoomDTO> getAllHotelRooms() {
-        List<HotelRoom> rooms = hotelRoomRepository.findAll();
-        return rooms.stream()
-                .map(r -> new HotelRoomDTO(r.getId(), r.getRoomNumber(), r.getRoomType(), r.getCapacity(), r.getPrice()))
-                .toList();
-    }
-
-    // Отримання номера за ID
-    public HotelRoomDTO getHotelRoomById(Long id) {
-        HotelRoom room = hotelRoomRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Hotel room not found"));
-
-        return new HotelRoomDTO(room.getId(), room.getRoomNumber(), room.getRoomType(),
-                room.getCapacity(), room.getPrice());
-    }
-
-    // Оновлення номера
-    @Transactional
     public HotelRoomDTO updateHotelRoom(Long id, HotelRoomDTO hotelRoomDTO) {
-        HotelRoom room = hotelRoomRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Hotel room not found"));
-
-        room.setRoomNumber(hotelRoomDTO.roomNumber());
-        room.setRoomType(hotelRoomDTO.roomType());
-        room.setCapacity(hotelRoomDTO.capacity());
-        room.setPrice(hotelRoomDTO.price());
-
-        room = hotelRoomRepository.save(room);
-
-        return new HotelRoomDTO(room.getId(), room.getRoomNumber(), room.getRoomType(),
-                room.getCapacity(), room.getPrice());
+        HotelRoom hotelRoom = hotelRoomRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Hotel room not found with id: " + id));
+        hotelRoomMapper.updateHotelRoomFromDTO(hotelRoomDTO, hotelRoom);
+        hotelRoomRepository.save(hotelRoom);
+        return hotelRoomMapper.toDTO(hotelRoom);
     }
 
-    // Видалення номера
-    @Transactional
     public void deleteHotelRoom(Long id) {
-        if (!hotelRoomRepository.existsById(id)) {
-            throw new RuntimeException("Hotel room not found");
-        }
         hotelRoomRepository.deleteById(id);
+    }
+
+    private List<Sort.Order> parseSort(String[] sort) {
+        return Arrays.stream(sort)
+                .map(s -> {
+                    String[] parts = s.split(",");
+                    return new Sort.Order(Sort.Direction.fromString(parts[1]), parts[0]);
+                })
+                .collect(Collectors.toList());
     }
 }
