@@ -5,6 +5,7 @@ import com.blackfox.estate.entity.HotelRoom;
 import com.blackfox.estate.exception.ResourceNotFoundException;
 import com.blackfox.estate.mapper.HotelRoomMapper;
 import com.blackfox.estate.repository.HotelRoomRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,11 +42,16 @@ public class HotelRoomService {
         }, pageable).map(hotelRoomMapper::toDTO);
     }
 
+    @Transactional
     public HotelRoomDTO createHotelRoom(HotelRoomDTO hotelRoomDTO) {
+        if (hotelRoomRepository.existsByRoomType(hotelRoomDTO.roomType())) {
+            throw new IllegalArgumentException("Room type " + hotelRoomDTO.roomType() + " already exists");
+        }
         HotelRoom hotelRoom = hotelRoomMapper.toEntity(hotelRoomDTO);
-        hotelRoomRepository.save(hotelRoom);
+        hotelRoom = hotelRoomRepository.save(hotelRoom);
         return hotelRoomMapper.toDTO(hotelRoom);
     }
+
 
     public HotelRoomDTO updateHotelRoom(Long id, HotelRoomDTO hotelRoomDTO) {
         HotelRoom hotelRoom = hotelRoomRepository.findById(id)

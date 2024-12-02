@@ -5,6 +5,7 @@ import com.blackfox.estate.entity.Customer;
 import com.blackfox.estate.exception.ResourceNotFoundException;
 import com.blackfox.estate.repository.CustomerRepository;
 import com.blackfox.estate.mapper.CustomerMapper;
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -39,11 +40,16 @@ public class CustomerService {
     }
 
 
+    @Transactional
     public CustomerDTO createCustomer(CustomerDTO customerDTO) {
+        if (customerRepository.existsByEmail(customerDTO.email())) {
+            throw new IllegalArgumentException("Email " + customerDTO.email() + " is already in use");
+        }
         Customer customer = customerMapper.toEntity(customerDTO);
-        customerRepository.save(customer);
+        customer = customerRepository.save(customer);
         return customerMapper.toDTO(customer);
     }
+
 
     public CustomerDTO updateCustomer(Long id, CustomerDTO customerDTO) {
         Customer customer = customerRepository.findById(id)
