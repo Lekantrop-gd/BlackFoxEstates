@@ -7,7 +7,6 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Booking {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +16,8 @@ public class Booking {
     private String checkInDate;
     private String checkOutDate;
 
-    // Конструктор без параметрів
     public Booking() {}
 
-    // Конструктор з параметрами
     public Booking(Long customerId, Long hotelRoomId, String checkInDate, String checkOutDate) {
         this.customerId = customerId;
         this.hotelRoomId = hotelRoomId;
@@ -28,7 +25,6 @@ public class Booking {
         this.checkOutDate = checkOutDate;
     }
 
-    // Геттери та сеттери
     public Long getId() {
         return id;
     }

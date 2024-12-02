@@ -22,17 +22,14 @@ public class Customer {
     @Pattern(regexp = "^\\+\\d{11,13}$", message = "Phone number must match \"+12345678901\" format")
     private String phoneNumber;
 
-    // Конструктор без параметрів
     public Customer() {}
 
-    // Конструктор з параметрами
     public Customer(String name, String email, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
-    // Геттери та сеттери
     public Long getId() {
         return id;
     }

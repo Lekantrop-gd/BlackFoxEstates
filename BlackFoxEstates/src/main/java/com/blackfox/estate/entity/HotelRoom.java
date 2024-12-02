@@ -17,10 +17,8 @@ public class HotelRoom {
     private int capacity;
     private double price;
 
-    // Конструктор без параметрів
     public HotelRoom() {}
 
-    // Конструктор з параметрами
     public HotelRoom(String roomNumber, String roomType, int capacity, double price) {
         this.roomNumber = roomNumber;
         this.roomType = roomType;
@@ -28,7 +26,6 @@ public class HotelRoom {
         this.price = price;
     }
 
-    // Геттери та сеттери
     public Long getId() {
         return id;
     }
