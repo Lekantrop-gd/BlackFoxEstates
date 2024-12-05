@@ -1,56 +1,206 @@
-2024-12-02 21:58:03 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 23824 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
-2024-12-02 21:58:03 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-02 21:58:09 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 6.799 seconds (process running for 7.788)
-2024-12-02 21:58:27 [http-nio-8090-exec-1] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha1rlie.brown@example.com
-2024-12-02 21:58:27 [http-nio-8090-exec-1] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha1rlie.brown@example.com
-2024-12-02 21:58:27 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha1rlie.brown@example.com is already in use
-2024-12-02 21:58:29 [http-nio-8090-exec-4] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha1rlie.brown@example.com
-2024-12-02 21:58:29 [http-nio-8090-exec-4] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha1rlie.brown@example.com
-2024-12-02 21:58:29 [http-nio-8090-exec-4] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha1rlie.brown@example.com is already in use
-2024-12-02 21:58:30 [http-nio-8090-exec-6] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha1rlie.brown@example.com
-2024-12-02 21:58:30 [http-nio-8090-exec-6] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha1rlie.brown@example.com
-2024-12-02 21:58:30 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha1rlie.brown@example.com is already in use
-2024-12-02 21:58:32 [http-nio-8090-exec-7] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha21rlie.brown@example.com
-2024-12-02 21:58:33 [http-nio-8090-exec-7] INFO  c.b.estate.service.CustomerService - Customer created with ID: 47
-2024-12-02 21:58:34 [http-nio-8090-exec-9] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha21rlie.brown@example.com
-2024-12-02 21:58:34 [http-nio-8090-exec-9] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha21rlie.brown@example.com
-2024-12-02 21:58:34 [http-nio-8090-exec-9] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha21rlie.brown@example.com is already in use
-2024-12-02 21:58:35 [http-nio-8090-exec-2] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha21rlie.brown@example.com
-2024-12-02 21:58:35 [http-nio-8090-exec-2] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha21rlie.brown@example.com
-2024-12-02 21:58:35 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha21rlie.brown@example.com is already in use
-2024-12-02 22:00:38 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-12-02 22:00:38 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 13320 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
-2024-12-02 22:00:38 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
-2024-12-02 22:00:38 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-02 22:00:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-02 22:00:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
-2024-12-02 22:00:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
-2024-12-02 22:00:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-2024-12-02 22:00:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-12-02 22:00:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
-2024-12-02 22:00:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-12-02 22:00:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1300 ms
-2024-12-02 22:00:40 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-02 22:00:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
-2024-12-02 22:00:40 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
-2024-12-02 22:00:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
-2024-12-02 22:00:40 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-02 22:00:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-12-02 22:00:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45984654
-2024-12-02 22:00:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-12-02 22:00:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
-2024-12-02 22:00:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-12-02 22:00:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-02 22:00:42 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-02 22:00:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-2024-12-02 22:00:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
-2024-12-02 22:00:42 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.997 seconds (process running for 5.723)
-2024-12-02 22:00:54 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-02 22:00:54 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-12-02 22:00:54 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-12-02 22:00:55 [http-nio-8090-exec-2] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha21rlie.brown@example.com
-2024-12-02 22:00:55 [http-nio-8090-exec-2] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha21rlie.brown@example.com
-2024-12-02 22:00:55 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha21rlie.brown@example.com is already in use
-2024-12-02 22:00:56 [http-nio-8090-exec-8] INFO  c.b.estate.service.CustomerService - Creating customer with email: cha21rlie.brown@example.com
-2024-12-02 22:00:56 [http-nio-8090-exec-8] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: cha21rlie.brown@example.com
-2024-12-02 22:00:56 [http-nio-8090-exec-8] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email cha21rlie.brown@example.com is already in use
+2024-12-05 00:24:19 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-05 00:24:19 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 8404 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-05 00:24:19 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-05 00:24:19 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-05 00:24:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05 00:24:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-12-05 00:24:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-05 00:24:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-05 00:24:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-05 00:24:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-05 00:24:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-05 00:24:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1636 ms
+2024-12-05 00:24:21 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05 00:24:21 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-05 00:24:21 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-05 00:24:21 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 00:24:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05 00:24:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-05 00:24:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@455da438
+2024-12-05 00:24:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-05 00:24:22 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 00:24:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-05 00:24:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 00:24:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05 00:24:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-05 00:24:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-05 00:24:24 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 6.166 seconds (process running for 6.965)
+2024-12-05 00:26:12 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05 00:26:12 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-05 00:26:12 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-05 00:26:13 [http-nio-8090-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:26:13 [http-nio-8090-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (17, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:26:13 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (17, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:26:32 [http-nio-8090-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:26:32 [http-nio-8090-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (18, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:26:32 [http-nio-8090-exec-10] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (18, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:26:34 [http-nio-8090-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:26:34 [http-nio-8090-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (19, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:26:34 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (19, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:26:35 [http-nio-8090-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:26:35 [http-nio-8090-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (20, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:26:35 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (20, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:27:30 [http-nio-8090-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:27:30 [http-nio-8090-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (21, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:27:30 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (21, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:27:32 [http-nio-8090-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-05 00:27:32 [http-nio-8090-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (22, 2, null, null, null, 150, 1, Suite).
+2024-12-05 00:27:32 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (22, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-05 00:29:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 00:29:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-05 00:29:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-05 00:30:39 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-05 00:30:39 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 19156 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-05 00:30:39 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-05 00:30:39 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-05 00:30:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05 00:30:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2024-12-05 00:30:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-05 00:30:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-05 00:30:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-05 00:30:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-05 00:30:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-05 00:30:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1435 ms
+2024-12-05 00:30:41 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05 00:30:41 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-05 00:30:41 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-05 00:30:41 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 00:30:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05 00:30:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-05 00:30:42 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@194911c1
+2024-12-05 00:30:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-05 00:30:42 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 00:30:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-05 00:30:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 00:30:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05 00:30:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-05 00:30:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-05 00:30:44 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 5.404 seconds (process running for 6.148)
+2024-12-05 00:34:35 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05 00:34:35 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-05 00:34:35 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-05 00:34:35 [http-nio-8090-exec-1] INFO  c.b.estate.service.CustomerService - Creating customer with email: alice.smith@example.com
+2024-12-05 00:34:35 [http-nio-8090-exec-1] INFO  c.b.estate.service.CustomerService - Customer created with ID: 1
+2024-12-05 00:37:21 [http-nio-8090-exec-7] ERROR c.b.e.e.GlobalExceptionHandler - Unhandled Exception: 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:183)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:136)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2477)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:750)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:674)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:2144)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1794)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:798)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:423)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1409)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 51 common frames omitted
+2024-12-05 00:44:29 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Sort parameter must be in the format 'field,direction'
+2024-12-05 01:10:55 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Sort parameter must be in the format 'field,direction'
+2024-12-05 01:17:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 01:17:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-05 01:17:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-05 01:20:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-05 01:20:10 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 7080 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-05 01:20:10 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-05 01:20:10 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-05 01:20:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05 01:20:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2024-12-05 01:20:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-05 01:20:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-05 01:20:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-05 01:20:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-05 01:20:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-05 01:20:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1978 ms
+2024-12-05 01:20:12 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05 01:20:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-05 01:20:12 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-05 01:20:12 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 01:20:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05 01:20:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-05 01:20:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70d3cdbf
+2024-12-05 01:20:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-05 01:20:13 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-05 01:20:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-05 01:20:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 01:20:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05 01:20:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-05 01:20:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-05 01:20:16 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 6.508 seconds (process running for 7.302)
+2024-12-05 01:20:27 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05 01:20:27 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-05 01:20:27 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-05 01:20:27 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Sort parameter must be in the format 'field,direction'
+2024-12-05 01:20:29 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Sort parameter must be in the format 'field,direction'
+2024-12-05 01:23:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 01:23:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-05 01:23:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

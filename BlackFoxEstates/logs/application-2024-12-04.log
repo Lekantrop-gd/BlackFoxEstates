@@ -1,0 +1,182 @@
+2024-12-04 12:00:11 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-04 12:00:11 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 15728 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-04 12:00:11 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-04 12:00:11 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 12:00:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04 12:00:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2024-12-04 12:00:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-04 12:00:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-04 12:00:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-04 12:00:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-04 12:00:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-04 12:00:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2374 ms
+2024-12-04 12:00:14 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04 12:00:14 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-04 12:00:14 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-04 12:00:14 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 12:00:14 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04 12:00:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-04 12:00:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@496cedbb
+2024-12-04 12:00:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-04 12:00:15 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 12:00:16 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-04 12:00:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 12:00:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04 12:00:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-04 12:00:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-04 12:00:18 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 7.453 seconds (process running for 15.303)
+2024-12-04 12:00:24 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04 12:00:24 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-04 12:00:24 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-04 12:00:37 [http-nio-8090-exec-4] INFO  c.b.estate.service.CustomerService - Creating customer with email: alice.smith@example.com
+2024-12-04 12:00:37 [http-nio-8090-exec-4] WARN  c.b.estate.service.CustomerService - Customer creation failed. Email already exists: alice.smith@example.com
+2024-12-04 12:00:37 [http-nio-8090-exec-4] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Email alice.smith@example.com is already in use
+2024-12-04 12:26:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 12:26:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-04 12:26:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-04 12:26:25 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-04 12:26:25 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 5180 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-04 12:26:25 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-04 12:26:25 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 12:26:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04 12:26:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2024-12-04 12:26:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-04 12:26:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-04 12:26:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-04 12:26:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-04 12:26:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-04 12:26:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1395 ms
+2024-12-04 12:26:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04 12:26:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-04 12:26:26 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-04 12:26:27 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 12:26:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04 12:26:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-04 12:26:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@745926c3
+2024-12-04 12:26:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-04 12:26:27 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 12:26:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-04 12:26:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 12:26:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04 12:26:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-04 12:26:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-04 12:26:29 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 5.181 seconds (process running for 5.919)
+2024-12-04 12:26:32 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04 12:26:32 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-04 12:26:32 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-04 12:26:33 [http-nio-8090-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 12:26:33 [http-nio-8090-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (1, 2, null, null, null, 150, null, Suite).
+2024-12-04 12:26:33 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (1, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 12:26:45 [http-nio-8090-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 12:26:45 [http-nio-8090-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (2, 2, null, null, null, 150, null, Suite).
+2024-12-04 12:26:45 [http-nio-8090-exec-4] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (2, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 12:26:48 [http-nio-8090-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 12:26:48 [http-nio-8090-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (3, 2, null, null, null, 150, null, Suite).
+2024-12-04 12:26:48 [http-nio-8090-exec-10] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (3, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:32 [http-nio-8090-exec-8] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:32 [http-nio-8090-exec-8] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (4, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:32 [http-nio-8090-exec-8] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (4, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:33 [http-nio-8090-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:33 [http-nio-8090-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (5, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:33 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (5, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:35 [http-nio-8090-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:35 [http-nio-8090-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (6, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:35 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (6, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:36 [http-nio-8090-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:36 [http-nio-8090-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (7, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:36 [http-nio-8090-exec-9] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (7, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:37 [http-nio-8090-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:37 [http-nio-8090-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (8, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:37 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (8, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:03:39 [http-nio-8090-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:03:39 [http-nio-8090-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (9, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:03:39 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (9, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:06:33 [http-nio-8090-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:06:33 [http-nio-8090-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (10, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:06:33 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (10, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:07:47 [http-nio-8090-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:07:47 [http-nio-8090-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (11, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:07:47 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (11, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:07:48 [http-nio-8090-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:07:48 [http-nio-8090-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (12, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:07:48 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (12, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:07:50 [http-nio-8090-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:07:50 [http-nio-8090-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (13, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:07:50 [http-nio-8090-exec-9] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (13, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:07:51 [http-nio-8090-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:07:51 [http-nio-8090-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (14, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:07:51 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (14, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:13:01 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 13:13:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-04 13:13:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-04 13:45:22 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-04 13:45:22 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 5176 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-04 13:45:22 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-12-04 13:45:22 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 13:45:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04 13:45:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-12-04 13:45:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2024-12-04 13:45:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-04 13:45:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-04 13:45:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-12-04 13:45:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-04 13:45:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1629 ms
+2024-12-04 13:45:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04 13:45:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-12-04 13:45:24 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-12-04 13:45:24 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 13:45:24 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04 13:45:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-04 13:45:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10b67f54
+2024-12-04 13:45:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-04 13:45:25 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-12-04 13:45:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-04 13:45:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 13:45:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04 13:45:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-04 13:45:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2024-12-04 13:45:27 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 5.108 seconds (process running for 5.827)
+2024-12-04 13:45:35 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04 13:45:35 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-04 13:45:35 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-04 13:45:35 [http-nio-8090-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:45:35 [http-nio-8090-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (15, 2, null, null, null, 150, null, Suite).
+2024-12-04 13:45:35 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (15, 2, null, null, null, 150, null, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:47:10 [http-nio-8090-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-12-04 13:47:10 [http-nio-8090-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (16, 2, null, null, null, 150, 1, Suite).
+2024-12-04 13:47:10 [http-nio-8090-exec-10] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: null value in column "is_available" of relation "hotel_room" violates not-null constraint
+  Detail: Failing row contains (16, 2, null, null, null, 150, 1, Suite).] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [is_available" of relation "hotel_room]
+2024-12-04 13:47:39 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04 13:47:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-04 13:47:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

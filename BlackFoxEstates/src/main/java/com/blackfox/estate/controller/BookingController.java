@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/bookings")
 public class BookingController {
@@ -19,15 +21,22 @@ public class BookingController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<BookingDTO>> getBookings(
+    public ResponseEntity<?> getBookings(
             @RequestParam(required = false) Long customerId,
             @RequestParam(required = false) Long hotelRoomId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "id,asc") String[] sort
+            @RequestParam(defaultValue = "id,asc") String sort
     ) {
-        Page<BookingDTO> bookings = bookingService.getBookings(customerId, hotelRoomId, page, size, sort);
-        return ResponseEntity.ok(bookings);
+        try {
+            Page<BookingDTO> bookings = bookingService.getBookings(customerId, hotelRoomId, page, size, sort);
+            return ResponseEntity.ok(bookings);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(Map.of(
+                    "error", "Bad Request",
+                    "details", e.getMessage()
+            ));
+        }
     }
 
     @PostMapping

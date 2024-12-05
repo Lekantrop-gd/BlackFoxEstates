@@ -8,6 +8,8 @@ import com.blackfox.estate.mapper.CustomerMapper;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -31,6 +33,7 @@ public class CustomerService {
         this.customerMapper = customerMapper;
     }
 
+    @Cacheable(value = "customers", key = "#email + '-' + #page + '-' + #size + '-' + T(java.util.Arrays).toString(#sort)")
     public Page<CustomerDTO> getCustomers(String email, int page, int size, String[] sort) {
         Pageable pageable = PageRequest.of(page, size, Sort.by(parseSort(sort)));
         return customerRepository.findAll((root, query, criteriaBuilder) -> {
@@ -43,6 +46,7 @@ public class CustomerService {
     }
 
     @Transactional
+    @CacheEvict(value = "customers", allEntries = true)
     public CustomerDTO createCustomer(CustomerDTO customerDTO) {
         logger.info("Creating customer with email: {}", customerDTO.email());
         if (customerRepository.existsByEmail(customerDTO.email())) {
@@ -55,6 +59,8 @@ public class CustomerService {
         return customerMapper.toDTO(customer);
     }
 
+    @Transactional
+    @CacheEvict(value = "customers", allEntries = true)
     public CustomerDTO updateCustomer(Long id, CustomerDTO customerDTO) {
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
@@ -63,6 +69,7 @@ public class CustomerService {
         return customerMapper.toDTO(customer);
     }
 
+    @CacheEvict(value = "customers", allEntries = true)
     public void deleteCustomer(Long id) {
         customerRepository.deleteById(id);
     }
@@ -71,8 +78,19 @@ public class CustomerService {
         return Arrays.stream(sort)
                 .map(s -> {
                     String[] parts = s.split(",");
-                    return new Sort.Order(Sort.Direction.fromString(parts[1]), parts[0]);
+                    if (parts.length != 2) {
+                        throw new IllegalArgumentException("Sort parameter must be in the format 'field,direction'");
+                    }
+                    String property = parts[0]; // Перше значення — це поле сортування
+                    Sort.Direction direction;
+                    try {
+                        direction = Sort.Direction.fromString(parts[1].toUpperCase());
+                    } catch (IllegalArgumentException e) {
+                        throw new IllegalArgumentException("Invalid sort direction: " + parts[1]);
+                    }
+                    return new Sort.Order(direction, property);
                 })
                 .collect(Collectors.toList());
     }
+
 }

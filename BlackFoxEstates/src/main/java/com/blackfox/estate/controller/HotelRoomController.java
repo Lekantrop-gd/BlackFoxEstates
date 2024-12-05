@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/hotelRooms")
+@RequestMapping("/api/hotel-rooms")
 public class HotelRoomController {
 
     private final HotelRoomService hotelRoomService;
