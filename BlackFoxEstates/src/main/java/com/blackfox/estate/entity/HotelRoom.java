@@ -1,68 +1,30 @@
 package com.blackfox.estate.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Table(name="hotel_room")
+@Setter
+@Getter
 @Entity
+@NoArgsConstructor
 public class HotelRoom {
-
+    @Column(name="id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="room_number")
     private String roomNumber;
+
+    @Column(name="room_type")
     private String roomType;
+
+    @Column(name="capacity")
     private int capacity;
+
+    @Column(name="price")
     private double price;
-
-    public HotelRoom() {}
-
-    public HotelRoom(String roomNumber, String roomType, int capacity, double price) {
-        this.roomNumber = roomNumber;
-        this.roomType = roomType;
-        this.capacity = capacity;
-        this.price = price;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public String getRoomType() {
-        return roomType;
-    }
-
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }
