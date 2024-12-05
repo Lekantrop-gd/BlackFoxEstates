@@ -4,7 +4,6 @@ import com.blackfox.estate.dto.CustomerDTO;
 import com.blackfox.estate.service.CustomerService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +30,8 @@ public class CustomerController {
 
     @PostMapping
     public ResponseEntity<CustomerDTO> createCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
-        return new ResponseEntity<>(customerService.createCustomer(customerDTO), HttpStatus.CREATED);
+        CustomerDTO createdCustomer = customerService.createCustomer(customerDTO);
+        return ResponseEntity.status(201).body(createdCustomer);
     }
 
     @PutMapping("/{id}")
@@ -39,7 +39,8 @@ public class CustomerController {
             @PathVariable Long id,
             @Valid @RequestBody CustomerDTO customerDTO
     ) {
-        return ResponseEntity.ok(customerService.updateCustomer(id, customerDTO));
+        CustomerDTO updatedCustomer = customerService.updateCustomer(id, customerDTO);
+        return ResponseEntity.ok(updatedCustomer);
     }
 
     @DeleteMapping("/{id}")

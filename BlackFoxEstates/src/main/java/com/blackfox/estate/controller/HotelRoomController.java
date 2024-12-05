@@ -4,7 +4,6 @@ import com.blackfox.estate.dto.HotelRoomDTO;
 import com.blackfox.estate.service.HotelRoomService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,13 +25,14 @@ public class HotelRoomController {
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "id,asc") String[] sort
     ) {
-        Page<HotelRoomDTO> rooms = hotelRoomService.getHotelRooms(roomType, capacity, page, size, sort);
-        return ResponseEntity.ok(rooms);
+        Page<HotelRoomDTO> hotelRooms = hotelRoomService.getHotelRooms(roomType, capacity, page, size, sort);
+        return ResponseEntity.ok(hotelRooms);
     }
 
     @PostMapping
     public ResponseEntity<HotelRoomDTO> createHotelRoom(@Valid @RequestBody HotelRoomDTO hotelRoomDTO) {
-        return new ResponseEntity<>(hotelRoomService.createHotelRoom(hotelRoomDTO), HttpStatus.CREATED);
+        HotelRoomDTO createdRoom = hotelRoomService.createHotelRoom(hotelRoomDTO);
+        return ResponseEntity.status(201).body(createdRoom);
     }
 
     @PutMapping("/{id}")
@@ -40,7 +40,8 @@ public class HotelRoomController {
             @PathVariable Long id,
             @Valid @RequestBody HotelRoomDTO hotelRoomDTO
     ) {
-        return ResponseEntity.ok(hotelRoomService.updateHotelRoom(id, hotelRoomDTO));
+        HotelRoomDTO updatedRoom = hotelRoomService.updateHotelRoom(id, hotelRoomDTO);
+        return ResponseEntity.ok(updatedRoom);
     }
 
     @DeleteMapping("/{id}")
