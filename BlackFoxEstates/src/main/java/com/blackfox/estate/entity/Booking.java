@@ -16,11 +16,13 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="customer_id")
-    private Long customerId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="customer_id")
+    private Customer customer;
 
-    @Column(name="hotel_room_id")
-    private Long hotelRoomId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="hotel_room_id")
+    private HotelRoom hotelRoom;
 
     @Column(name="check_in_date")
     private String checkInDate;

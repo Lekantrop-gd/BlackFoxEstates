@@ -8,7 +8,6 @@ import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring")
 public interface HotelRoomMapper {
-
     HotelRoomDTO toDTO(HotelRoom hotelRoom);
 
     HotelRoom toEntity(HotelRoomDTO hotelRoomDTO);
