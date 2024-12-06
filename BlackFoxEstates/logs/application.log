@@ -1801,3 +1801,8 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detai (truncated)...]
 2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detail: Key (room_number)=(101) already exists.] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [ukknu5dhop8af889wu2prb7y5m7]]
 2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 409 CONFLICT
+2024-12-06 13:16:46 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 13:16:46 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 13:16:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 13:16:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 13:16:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
