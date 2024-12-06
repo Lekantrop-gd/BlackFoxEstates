@@ -21,11 +21,11 @@ public class Customer {
     @Column(name="name")
     private String name;
 
-    @Column(name="email")
+    @Column(name="email", unique=true)
     @Email(message = "Email should be valid")
     private String email;
 
-    @Column(name="phone_number")
+    @Column(name="phone_number", unique=true)
     @Pattern(regexp = "^\\+\\d{11,13}$", message = "Phone number must match \"+12345678901\" format")
     private String phoneNumber;
 }

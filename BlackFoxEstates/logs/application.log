@@ -980,3 +980,824 @@ Consider defining a bean of type 'com.blackfox.estate.mapper.BookingMapper' in y
 2024-12-06 01:12:58 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
 2024-12-06 01:12:58 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.BookingDTO instances]
 2024-12-06 01:12:58 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/customers/1", parameters={}
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#updateCustomer(Long, CustomerDTO)
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=123@example.com, phoneNumber=+12345678901]]
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=1, name=Jordan, email=123@example.com, phoneNumber=+12345678901]]
+2024-12-06 01:19:21 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:19:39 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&firstName=Jordan&page=0&size=10", parameters={masked}
+2024-12-06 01:19:39 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:19:39 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:19:39 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:19:39 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:27:09 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&name=Jordan&page=0&size=10&sort=name,asc", parameters={masked}
+2024-12-06 01:27:09 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:27:09 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:27:09 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:27:09 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:27:24 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&name=Jordan&page=0&size=10&sort=phoneNumber,asc", parameters={masked}
+2024-12-06 01:27:24 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:27:24 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:27:24 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:27:24 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=John Doe, email=test@example.com, phoneNumber=+12344678901]]
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=4, name=John Doe, email=test@example.com, phoneNumber=+12344678901]]
+2024-12-06 01:27:33 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=John Doe, email=test@example.com, phoneNumber=+12343678901]]
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=5, name=John Doe, email=test@example.com, phoneNumber=+12343678901]]
+2024-12-06 01:27:36 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+11111111111]]
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=6, name=Jordan, email=test@example.com, phoneNumber=+11111111111]]
+2024-12-06 01:28:00 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+22222222222]]
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=7, name=Jordan, email=test@example.com, phoneNumber=+22222222222]]
+2024-12-06 01:28:05 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=8, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 01:28:11 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 01:28:15 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&name=Jordan&page=0&size=10&sort=phoneNumber,asc", parameters={masked}
+2024-12-06 01:28:15 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:28:15 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:15 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:28:15 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:28:22 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 01:28:22 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:28:22 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:22 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:28:22 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:28:39 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=0&size=10&sort=phoneNumber,asc", parameters={masked}
+2024-12-06 01:28:39 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:28:39 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:39 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:28:39 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:28:50 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=0&size=10&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 01:28:50 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 01:28:50 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 01:28:50 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 01:28:50 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 01:29:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 01:29:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 01:29:09 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 01:29:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 01:29:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 09:45:56 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 09:45:56 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 26120 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 09:45:56 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 09:45:56 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 09:45:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 09:45:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-12-06 09:45:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 09:45:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 09:45:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 09:45:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 09:45:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 09:45:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1987 ms
+2024-12-06 09:45:59 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 09:45:59 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 09:45:59 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 09:45:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 09:45:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 09:45:59 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31d4b3e8
+2024-12-06 09:45:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 09:46:00 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 09:46:00 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 09:46:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 09:46:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 09:46:01 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 09:46:02 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 09:46:02 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 09:46:02 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 09:46:02 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 09:46:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 09:46:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 09:46:03 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 6.827 seconds (process running for 7.769)
+2024-12-06 09:46:08 [http-nio-8090-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 09:46:08 [http-nio-8090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2c955487
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2bf0bb93
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 09:46:08 [http-nio-8090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=0&size=10&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 09:46:08 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 09:46:09 [http-nio-8090-exec-4] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2024-12-06 09:46:09 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 09:46:09 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 09:46:09 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 10:02:26 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=0&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 10:02:26 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 10:02:26 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 10:02:26 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 2 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 10:02:26 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 10:02:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=1&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 10:02:39 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 10:02:39 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 10:02:39 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 2 of 2 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 10:02:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 10:24:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m40s469ms774µs300ns).
+2024-12-06 10:26:31 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=1&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 10:26:31 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 10:26:31 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 10:26:31 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 2 of 2 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 10:26:31 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 10:26:41 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=2&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 10:26:41 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 10:26:41 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 10:26:41 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 3 of 2 containing UNKNOWN instances]
+2024-12-06 10:26:41 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 11:00:17 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m6s453ms741µs300ns).
+2024-12-06 11:07:31 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&firstName=Jordan&page=0&size=10", parameters={masked}
+2024-12-06 11:07:31 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 11:07:31 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:07:31 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 11:07:31 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 11:07:38 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=2&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 11:07:38 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 11:07:38 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:07:38 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 3 of 2 containing UNKNOWN instances]
+2024-12-06 11:07:38 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 11:07:49 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=1&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 11:07:49 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 11:07:49 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:07:49 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 2 of 2 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 11:07:49 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 11:58:54 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 11:58:54 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 11:58:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 11:58:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 11:58:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 11:59:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 11:59:01 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 15188 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 11:59:01 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 11:59:01 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 11:59:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 11:59:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2024-12-06 11:59:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 11:59:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 11:59:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 11:59:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 11:59:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 11:59:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1030 ms
+2024-12-06 11:59:02 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 11:59:02 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 11:59:02 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 11:59:02 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 11:59:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 11:59:02 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@483b7dc4
+2024-12-06 11:59:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 11:59:02 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 11:59:02 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 11:59:03 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 11:59:03 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 11:59:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 11:59:04 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 11:59:04 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 11:59:04 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 11:59:04 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 11:59:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 11:59:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 11:59:04 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.019 seconds (process running for 4.579)
+2024-12-06 11:59:10 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 11:59:10 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@318a81a0
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@623d222
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 11:59:10 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=37, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:10 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=38, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:11 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=39, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:12 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=40, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 11:59:13 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 11:59:16 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 11:59:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 11:59:16 [http-nio-8090-exec-6] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2024-12-06 11:59:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 11:59:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 2 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 11:59:16 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:00:05 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 12:00:05 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 12:00:05 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:00:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 12:00:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 12:00:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 12:00:16 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 6316 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 12:00:16 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 12:00:16 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 12:00:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 12:00:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-12-06 12:00:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 12:00:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:00:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 12:00:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 12:00:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 12:00:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1179 ms
+2024-12-06 12:00:18 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 12:00:18 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 12:00:18 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 12:00:18 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 12:00:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 12:00:18 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4070ace9
+2024-12-06 12:00:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 12:00:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 12:00:18 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 12:00:19 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 12:00:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:00:19 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 12:00:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 12:00:20 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 12:00:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 12:00:20 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 12:00:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:00:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 12:00:20 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.434 seconds (process running for 5.006)
+2024-12-06 12:00:24 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 12:00:24 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@38ae69f7
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@23adbd6b
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 12:00:24 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:00:24 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:00:25 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:00:25 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=41, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:00:25 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=42, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:00:26 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=43, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:13:16 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 12:40:22 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 12:40:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 12:40:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:40:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 12:40:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 12:41:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 12:41:12 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 26384 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 12:41:12 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 12:41:12 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 12:41:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 12:41:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-12-06 12:41:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 12:41:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:41:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 12:41:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 12:41:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 12:41:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1113 ms
+2024-12-06 12:41:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 12:41:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 12:41:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 12:41:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 12:41:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 12:41:14 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fc1c7e
+2024-12-06 12:41:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 12:41:14 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 12:41:14 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 12:41:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 12:41:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:41:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 12:41:15 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 12:41:15 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 12:41:15 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 12:41:16 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 12:41:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:41:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 12:41:16 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.29 seconds (process running for 5.499)
+2024-12-06 12:41:22 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 12:41:22 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@f73a7cf
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@949f0d
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 12:41:22 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:41:22 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:41:22 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:41:27 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:41:27 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:41:29 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:41:29 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:41:42 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 12:41:42 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 12:41:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:41:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 12:41:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 12:42:31 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 12:42:31 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 15228 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 12:42:31 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 12:42:31 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 12:42:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 12:42:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2024-12-06 12:42:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 12:42:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:42:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 12:42:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 12:42:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 12:42:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1070 ms
+2024-12-06 12:42:32 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 12:42:32 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 12:42:32 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 12:42:33 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 12:42:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 12:42:33 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61957d9c
+2024-12-06 12:42:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 12:42:33 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 12:42:33 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 12:42:34 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukdwk6cx0afu8bs9o4t536v1j5v" of relation "customer" does not exist, skipping
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukrosd2guvs3i1agkplv5n8vu82" of relation "customer" does not exist, skipping
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2024-12-06 12:42:34 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukknu5dhop8af889wu2prb7y5m7" of relation "hotel_room" does not exist, skipping
+2024-12-06 12:42:34 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:42:34 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 12:42:34 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 12:42:35 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 12:42:35 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 12:42:35 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 12:42:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:42:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 12:42:35 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.478 seconds (process running for 5.011)
+2024-12-06 12:42:39 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 12:42:39 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@61627c9d
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@68e62b3b
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 12:42:39 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:42:39 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:42:39 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:42:40 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:42:40 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:42:40 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:42:40 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/bookings", parameters={}
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#createBooking(BookingDTO)
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingDTO[id=null, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:42:44 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Customer not found with ID: 1
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Customer not found with ID: 1}]
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Customer not found with ID: 1]
+2024-12-06 12:42:44 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CustomerDTO[id=1, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:42:51 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 12:42:55 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/bookings", parameters={}
+2024-12-06 12:42:55 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#createBooking(BookingDTO)
+2024-12-06 12:42:55 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingDTO[id=null, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:42:56 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:42:56 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Hotel room not found with ID: 1
+2024-12-06 12:42:56 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:42:56 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Hotel room not found with ID: 1}]
+2024-12-06 12:42:56 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Hotel room not found with ID: 1]
+2024-12-06 12:42:56 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/hotel-rooms", parameters={}
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.HotelRoomController#createHotelRoom(HotelRoomDTO)
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [HotelRoomDTO[id=null, roomNumber=101, roomType=Deluxe, capacity=2, price=150.0]]
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [HotelRoomDTO[id=1, roomNumber=101, roomType=Deluxe, capacity=2, price=150.0]]
+2024-12-06 12:42:58 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/bookings", parameters={}
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#createBooking(BookingDTO)
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingDTO[id=null, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookingDTO[id=1, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:02 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/bookings", parameters={}
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#createBooking(BookingDTO)
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingDTO[id=null, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookingDTO[id=2, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:03 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/bookings", parameters={}
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#createBooking(BookingDTO)
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingDTO[id=null, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookingDTO[id=3, customerId=1, hotelRoomId=1, checkInDate=2024-01-01, checkOutDate=2024-01-10]]
+2024-12-06 12:43:04 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:06 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:06 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:07 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:07 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:38 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:38 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:43 [http-nio-8090-exec-8] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:43 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleGenericException(Exception)
+2024-12-06 12:43:43 [http-nio-8090-exec-10] ERROR c.b.e.e.GlobalExceptionHandler - Unhandled Exception: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=No static resource favicon.ico., error=Internal Server Error}]
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-12-06 12:43:43 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=123@example.com&firstName=Jordan&page=0&size=10", parameters={masked}
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:51 [http-nio-8090-exec-1] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?email=test@example.com&name=Jordan&page=1&size=3&sort=phoneNumber,desc", parameters={masked}
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.CustomerDTO>> com.blackfox.estate.controller.CustomerController.getCustomers(java.lang.String,int,int,java.lang.String[]): Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:43:54 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.String] not specified, and parameter name information no (truncated)...]
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:43:54 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:44:17 [http-nio-8090-exec-6] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:44:17 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:44:29 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 12:44:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 12:44:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:44:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 12:44:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 12:47:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 12:47:33 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 21220 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 12:47:33 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 12:47:33 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 12:47:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 12:47:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2024-12-06 12:47:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 12:47:34 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:47:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 12:47:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 12:47:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 12:47:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1004 ms
+2024-12-06 12:47:34 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 12:47:34 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 12:47:34 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 12:47:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 12:47:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 12:47:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b5798c2
+2024-12-06 12:47:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 12:47:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 12:47:35 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 12:47:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 12:47:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:47:36 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 12:47:36 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 12:47:36 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 12:47:36 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 12:47:36 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 12:47:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:47:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 12:47:37 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 3.878 seconds (process running for 4.425)
+2024-12-06 12:47:40 [http-nio-8090-exec-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 12:47:40 [http-nio-8090-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4645a575
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@27adb90f
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 12:47:40 [http-nio-8090-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:47:40 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:47:40 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<org.springframework.data.domain.Page<com.blackfox.estate.dto.BookingDTO>> com.blackfox.estate.controller.BookingController.getBookings(java.lang.Long,java.lang.Long,int,int,java.lang.String[]): Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleIllegalArgumentException(IllegalArgumentException)
+2024-12-06 12:47:41 [http-nio-8090-exec-3] WARN  c.b.e.e.GlobalExceptionHandler - IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{error=Name for argument of type [java.lang.Long] not specified, and parameter name information not  (truncated)...]
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.]
+2024-12-06 12:47:41 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-12-06 12:47:44 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06 12:47:44 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-06 12:47:44 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:47:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-06 12:47:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-06 12:48:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-06 12:48:43 [main] INFO  c.b.estate.BlackFoxEstateApplication - Starting BlackFoxEstateApplication using Java 23 with PID 11200 (B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates\target\classes started by Nazar in B:\College\Courseworks\Projects\[RKSZ] Black Fox Estates\BlackFoxEstates)
+2024-12-06 12:48:43 [main] DEBUG c.b.estate.BlackFoxEstateApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-06 12:48:43 [main] INFO  c.b.estate.BlackFoxEstateApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 12:48:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06 12:48:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2024-12-06 12:48:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-06 12:48:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:48:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-06 12:48:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06 12:48:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-06 12:48:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1067 ms
+2024-12-06 12:48:44 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06 12:48:44 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06 12:48:44 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-06 12:48:45 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06 12:48:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-06 12:48:45 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31ab4859
+2024-12-06 12:48:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-06 12:48:45 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-06 12:48:45 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06 12:48:45 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06 12:48:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06 12:48:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06 12:48:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2024-12-06 12:48:46 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-12-06 12:48:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-06 12:48:46 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-06 12:48:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-06 12:48:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-06 12:48:47 [main] INFO  c.b.estate.BlackFoxEstateApplication - Started BlackFoxEstateApplication in 4.004 seconds (process running for 4.57)
+2024-12-06 12:48:51 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06 12:48:51 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@57a0aeb8
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@62a6a47e
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-06 12:48:51 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bookings?page=0&size=10", parameters={masked}
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.BookingController#getBookings(Long, Long, int, int, String[])
+2024-12-06 12:48:51 [http-nio-8090-exec-1] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.BookingDTO instances]
+2024-12-06 12:48:51 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:48:58 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/customers?page=0&size=10", parameters={masked}
+2024-12-06 12:48:58 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#getCustomers(String, int, int, String[])
+2024-12-06 12:48:58 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:48:58 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.blackfox.estate.dto.CustomerDTO instances]
+2024-12-06 12:48:58 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-06 12:49:02 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:49:02 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:49:02 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:49:03 [http-nio-8090-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-12-06 12:49:03 [http-nio-8090-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"
+  Detail: Key (email)=(test@example.com) already exists.
+2024-12-06 12:49:03 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleDataIntegrityViolationException(DataIntegrityViolationException)
+2024-12-06 12:49:03 [http-nio-8090-exec-2] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"
+  Detail: Key (email)=(test@example.com) already exists.] [insert into customer (email,name,phone_number) values (?,?,?)]; SQL [insert into customer (email,name,phone_number) values (?,?,?)]; constraint [ukdwk6cx0afu8bs9o4t536v1j5v]
+2024-12-06 12:49:03 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:49:03 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"<EOL>  Detai (truncated)...]
+2024-12-06 12:49:03 [http-nio-8090-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"<EOL>  Detail: Key (email)=(test@example.com) already exists.] [insert into customer (email,name,phone_number) values (?,?,?)]; SQL [insert into customer (email,name,phone_number) values (?,?,?)]; constraint [ukdwk6cx0afu8bs9o4t536v1j5v]]
+2024-12-06 12:49:03 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 409 CONFLICT
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.CustomerController#createCustomer(CustomerDTO)
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CustomerDTO[id=null, name=Jordan, email=test@example.com, phoneNumber=+33333333333]]
+2024-12-06 12:49:06 [http-nio-8090-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-12-06 12:49:06 [http-nio-8090-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"
+  Detail: Key (email)=(test@example.com) already exists.
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleDataIntegrityViolationException(DataIntegrityViolationException)
+2024-12-06 12:49:06 [http-nio-8090-exec-5] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"
+  Detail: Key (email)=(test@example.com) already exists.] [insert into customer (email,name,phone_number) values (?,?,?)]; SQL [insert into customer (email,name,phone_number) values (?,?,?)]; constraint [ukdwk6cx0afu8bs9o4t536v1j5v]
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"<EOL>  Detai (truncated)...]
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukdwk6cx0afu8bs9o4t536v1j5v"<EOL>  Detail: Key (email)=(test@example.com) already exists.] [insert into customer (email,name,phone_number) values (?,?,?)]; SQL [insert into customer (email,name,phone_number) values (?,?,?)]; constraint [ukdwk6cx0afu8bs9o4t536v1j5v]]
+2024-12-06 12:49:06 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 409 CONFLICT
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/hotel-rooms", parameters={}
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.HotelRoomController#createHotelRoom(HotelRoomDTO)
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [HotelRoomDTO[id=null, roomNumber=101, roomType=Deluxe, capacity=2, price=150.0]]
+2024-12-06 12:49:17 [http-nio-8090-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-12-06 12:49:17 [http-nio-8090-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"
+  Detail: Key (room_number)=(101) already exists.
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleDataIntegrityViolationException(DataIntegrityViolationException)
+2024-12-06 12:49:17 [http-nio-8090-exec-10] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"
+  Detail: Key (room_number)=(101) already exists.] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [ukknu5dhop8af889wu2prb7y5m7]
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detai (truncated)...]
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detail: Key (room_number)=(101) already exists.] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [ukknu5dhop8af889wu2prb7y5m7]]
+2024-12-06 12:49:17 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 409 CONFLICT
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/hotel-rooms", parameters={}
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.blackfox.estate.controller.HotelRoomController#createHotelRoom(HotelRoomDTO)
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [HotelRoomDTO[id=null, roomNumber=101, roomType=Deluxe, capacity=2, price=150.0]]
+2024-12-06 12:49:18 [http-nio-8090-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-12-06 12:49:18 [http-nio-8090-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"
+  Detail: Key (room_number)=(101) already exists.
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.blackfox.estate.exception.GlobalExceptionHandler#handleDataIntegrityViolationException(DataIntegrityViolationException)
+2024-12-06 12:49:18 [http-nio-8090-exec-7] WARN  c.b.e.e.GlobalExceptionHandler - Data Integrity Violation: could not execute statement [ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"
+  Detail: Key (room_number)=(101) already exists.] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [ukknu5dhop8af889wu2prb7y5m7]
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{details=ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detai (truncated)...]
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukknu5dhop8af889wu2prb7y5m7"<EOL>  Detail: Key (room_number)=(101) already exists.] [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; SQL [insert into hotel_room (capacity,price,room_number,room_type) values (?,?,?,?)]; constraint [ukknu5dhop8af889wu2prb7y5m7]]
+2024-12-06 12:49:18 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 409 CONFLICT
