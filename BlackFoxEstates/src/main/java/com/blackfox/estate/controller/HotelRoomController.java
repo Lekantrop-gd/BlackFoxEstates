@@ -41,11 +41,12 @@ public class HotelRoomController {
     public ResponseEntity<Page<HotelRoomDTO>> getHotelRooms(
             @RequestParam(required = false) String roomType,
             @RequestParam(required = false) Integer capacity,
+            @RequestParam(required = false) Double price,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "id,asc") String[] sort
     ) {
-        Page<HotelRoomDTO> hotelRooms = hotelRoomService.getHotelRooms(roomType, capacity, page, size, sort);
+        Page<HotelRoomDTO> hotelRooms = hotelRoomService.getHotelRooms(roomType, capacity, price, page, size, sort);
         return ResponseEntity.ok(hotelRooms);
     }
 

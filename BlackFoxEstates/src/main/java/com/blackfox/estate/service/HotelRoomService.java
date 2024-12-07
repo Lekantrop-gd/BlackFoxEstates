@@ -9,7 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class HotelRoomService {
@@ -23,25 +27,26 @@ public class HotelRoomService {
         this.hotelRoomMapper = hotelRoomMapper;
     }
 
-    public Page<HotelRoomDTO> getHotelRooms(String roomType, Integer capacity, int page, int size, String[] sort) {
+    public Page<HotelRoomDTO> getHotelRooms(String roomType, Integer capacity, Double price, int page, int size, String[] sort) {
         Pageable pageable = PageRequest.of(page, size, parseSort(sort));
 
-        if (roomType != null && capacity != null) {
-            return hotelRoomRepository.findAll((root, query, criteriaBuilder) -> criteriaBuilder.and(
-                    criteriaBuilder.equal(root.get("roomType"), roomType),
-                    criteriaBuilder.equal(root.get("capacity"), capacity)
-            ), pageable).map(hotelRoomMapper::toDTO);
-        } else if (roomType != null) {
-            return hotelRoomRepository.findAll((root, query, criteriaBuilder) ->
-                            criteriaBuilder.equal(root.get("roomType"), roomType), pageable)
-                    .map(hotelRoomMapper::toDTO);
-        } else if (capacity != null) {
-            return hotelRoomRepository.findAll((root, query, criteriaBuilder) ->
-                            criteriaBuilder.equal(root.get("capacity"), capacity), pageable)
-                    .map(hotelRoomMapper::toDTO);
-        } else {
-            return hotelRoomRepository.findAll(pageable).map(hotelRoomMapper::toDTO);
+        Specification<HotelRoom> spec = Specification.where(null);
+
+        if (roomType != null) {
+            spec = spec.and((root, query, criteriaBuilder) ->
+                    criteriaBuilder.equal(root.get("roomType"), roomType));
         }
+        if (capacity != null) {
+            spec = spec.and((root, query, criteriaBuilder) ->
+                    criteriaBuilder.equal(root.get("capacity"), capacity));
+        }
+        if (price != null) {
+            spec = spec.and((root, query, criteriaBuilder) ->
+                    criteriaBuilder.equal(root.get("price"), price));
+        }
+
+        return hotelRoomRepository.findAll(spec, pageable)
+                .map(hotelRoomMapper::toDTO);
     }
 
     public HotelRoomDTO createHotelRoom(HotelRoomDTO hotelRoomDTO) {
@@ -65,10 +70,21 @@ public class HotelRoomService {
         hotelRoomRepository.deleteById(id);
     }
 
-    private Sort parseSort(String[] sort) {
-        if (sort.length == 2) {
-            return Sort.by(Sort.Direction.fromString(sort[1]), sort[0]);
+    private Sort parseSort(String[] sortParams) {
+        if (sortParams == null || sortParams.length == 0) {
+            return Sort.unsorted();
         }
-        return Sort.by(Sort.Direction.ASC, "id");
+        List<Sort.Order> orders = new ArrayList<>();
+        for (String param : sortParams) {
+            String[] split = param.split(",");
+            if (split.length == 2) {
+                String field = split[0];
+                String direction = split[1];
+                orders.add(new Sort.Order(Sort.Direction.fromString(direction), field));
+            } else {
+                throw new IllegalArgumentException("Invalid sort parameter: " + param);
+            }
+        }
+        return Sort.by(orders);
     }
 }

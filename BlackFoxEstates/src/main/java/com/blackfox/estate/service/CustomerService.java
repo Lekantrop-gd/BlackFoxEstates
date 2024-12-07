@@ -11,6 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class CustomerService {
 
@@ -57,10 +60,21 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    private Sort parseSort(String[] sort) {
-        if (sort.length == 2) {
-            return Sort.by(Sort.Direction.fromString(sort[1]), sort[0]);
+    private Sort parseSort(String[] sortParams) {
+        if (sortParams == null || sortParams.length == 0) {
+            return Sort.unsorted();
         }
-        return Sort.by(Sort.Direction.ASC, "id");
+        List<Sort.Order> orders = new ArrayList<>();
+        for (String param : sortParams) {
+            String[] split = param.split(",");
+            if (split.length == 2) {
+                String field = split[0];
+                String direction = split[1];
+                orders.add(new Sort.Order(Sort.Direction.fromString(direction), field));
+            } else {
+                throw new IllegalArgumentException("Invalid sort parameter: " + param);
+            }
+        }
+        return Sort.by(orders);
     }
 }
